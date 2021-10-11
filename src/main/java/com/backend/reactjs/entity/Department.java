@@ -28,7 +28,6 @@ public class Department implements Serializable {
     private String name;
 
     @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
-    @Cascade(value = {CascadeType.REMOVE, CascadeType.SAVE_UPDATE})
     private List<Account> account;
 
     public Department() {

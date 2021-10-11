@@ -41,7 +41,6 @@ public class Account implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "DepartmentID", nullable = false)
-    @Cascade(value = { CascadeType.REMOVE, CascadeType.SAVE_UPDATE })
     private Department department;
 
     @ManyToOne
